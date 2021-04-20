@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<svelte:head>
+	<title>Svelte Kit</title>
+</svelte:head>
+
+<h1>Hello { title }!!!</h1>
+
+<script lang="ts">
+	const title = "World";
+</script>
