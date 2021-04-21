@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env: 
+      BUILD_PATH: 'build'
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
@@ -26,8 +28,14 @@ jobs:
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.1.11
         with:
-          publish-dir: build
+          publish-dir: ${{ env.BUILD_PATH }}
           production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_PERSONAL_ACCESS_TOKEN }}
           NETLIFY_SITE_ID: 843318f9-67ec-4cae-b763-6f3e1c7879fc
+
+      - name: Save Build & Results to Lighthouse Branch 
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: lighthouse
+          folder: ${{ env.BUILD_PATH }}
