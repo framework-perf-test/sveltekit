@@ -20,22 +20,15 @@ jobs:
           node-version: "14"
       - run: yarn install
       - run: yarn build
-      - run: npm install -g @lhci/cli@0.7.x
+      - run: npm install -g @lhci/cli@0.7.x @lighthouse-test/badge-generator
       - run: lhci autorun
+      - run: lighthouse-badge-generator ${{ env.BUILD_PATH }}/_lighthouse
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-   
-      - name: Netlify Actions
-        uses: nwtgck/actions-netlify@v1.1.11
-        with:
-          publish-dir: ${{ env.BUILD_PATH }}
-          production-deploy: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_PERSONAL_ACCESS_TOKEN }}
-          NETLIFY_SITE_ID: 843318f9-67ec-4cae-b763-6f3e1c7879fc
 
-      - name: Save Build & Results to Lighthouse Branch 
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+      - name: Deploy Build & Results to Github Pages 
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          branch: lighthouse
-          folder: ${{ env.BUILD_PATH }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ${{ env.BUILD_PATH }}
