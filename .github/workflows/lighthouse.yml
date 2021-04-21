@@ -19,7 +19,7 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: npm install -g @lhci/cli@0.7.x
-      - run: lhci autorun --config=./lighthouserc.cjs
+      - run: lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
    
