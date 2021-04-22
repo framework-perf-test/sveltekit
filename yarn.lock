@@ -73,9 +73,9 @@
   integrity sha512-Atri/5jyiVmAklqDKb/5czmLkHos6LQOag61k/C6qWozMb8UopvL3bTm62hFQXGKvGnuSRq2xIueDOKWHM/7rA==
 
 "@sveltejs/kit@next":
-  version "1.0.0-next.84"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.84.tgz#8906f15b84f3de558874015f941132674b6b87b1"
-  integrity sha512-v3XsG2Gvl4Fo7j5Uqmeq7NxpdzL6ODi9fV7eQhVNF2/J1Dko2ptG786jC3ynuCR7vrp67Mv+1MgraqGwIBETAQ==
+  version "1.0.0-next.85"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.85.tgz#2b3c12ac5a73ee6913c9e4a3367732c6c0627505"
+  integrity sha512-hurjQxSObSDqX9RgKFBPRuDfCnGlEy8hg24g6SezV1grUV+qJ5JTNPxwQw75nOS11z67ZaHWwglw64OvqSBLgA==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^1.0.0-next.7"
     cheap-watch "^1.0.3"
