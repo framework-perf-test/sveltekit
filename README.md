@@ -1,40 +1,52 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/843318f9-67ec-4cae-b763-6f3e1c7879fc/deploy-status)](https://app.netlify.com/sites/perf-test-sveltekit/deploys)
+<h1 align="center">Welcome to @lighthouse-test 👋</h1>
+<p>
+  <a href="https://github.com/lighthouse-test/sveltekit-static/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/lighthouse-test/sveltekit-static/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/@lighthouse-test/sveltekit-static" />
+  </a>
+  <a href="https://twitter.com/aceonics" target="_blank">
+    <img alt="Twitter: aceonics" src="https://img.shields.io/twitter/follow/aceonics.svg?style=social" />
+  </a>
+</p>
 
-# create-svelte
+<p>
+  <a href="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.report.html">
+    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.performance.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.accessibility.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.best-practices.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.seo.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.pwa.svg" />
+  </a>
+</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+> This repository contains demo app to test the light house score. This is part of lighthouse test.
 
-## Creating a project
+### 🏠 [Lighthouse Results](https://lighthouse-test.github.io)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Author
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+👤 **Aceonics Reliable IT Services**
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+- Website: [https://www.aceonics.com](https://www.aceonics.com)
+- Twitter: [@aceonics](https://twitter.com/aceonics)
+- Github: [aceonics](https://github.com/aceonics)
+- LinkedIn: [aceonics](https://linkedin.com/company/aceonics)
 
-> Note: the `@next` is temporary
+## 🤝 Contributing
 
-## Developing
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/lighthouse-test/lighthouse.github.io/issues).
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Show your support
 
-```bash
-npm run dev
+Give a ⭐️ if this project helped you!
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 📝 License
 
-## Building
+Copyright © 2021 [Aceonics Reliable IT Services](https://www.aceonics.com).<br />
+This project is [MIT](https://github.com/lighthouse-test/sveltekit-static/blob/master/LICENSE) licensed.
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+---
 
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm start`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

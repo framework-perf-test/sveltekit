@@ -1,6 +1,20 @@
 {
-  "name": "~TODO~",
-  "version": "0.0.1",
+  "name": "@lighthouse-test/sveltekit-static",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aceonics Reliable IT Services",
+    "email": "info@aceonics.com"
+  },
+  "description": "Lighthouse reports for frameworks",
+  "homepage": "https://lighthouse-test.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lighthouse-test/lighthouse-test.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lighthouse-test/lighthouse-test.github.io/issues"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",

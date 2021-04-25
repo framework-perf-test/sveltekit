@@ -1,6 +1,7 @@
 {
   "ci":{
     "collect":{
+      "url": ["/"],
       "staticDistDir":"./build"
     },
     "assert":{
