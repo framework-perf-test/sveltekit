@@ -1,9 +1,22 @@
 [
   {
-    "url": "http://localhost:40049/index.html",
+    "url": "http://localhost:33923/",
     "isRepresentativeRun": false,
-    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_index_html.report.html",
-    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_index_html.report.json",
+    "htmlPath": "/home/runner/work/sveltekit-static/sveltekit-static/build/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/sveltekit-static/sveltekit-static/build/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 0.93,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.91,
+      "pwa": 0.3
+    }
+  },
+  {
+    "url": "http://localhost:33923/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/runner/work/sveltekit-static/sveltekit-static/build/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/sveltekit-static/sveltekit-static/build/_lighthouse/_.report.json",
     "summary": {
       "performance": 1,
       "accessibility": 1,
@@ -13,23 +26,10 @@
     }
   },
   {
-    "url": "http://localhost:40049/index.html",
-    "isRepresentativeRun": false,
-    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_index_html.report.html",
-    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_index_html.report.json",
-    "summary": {
-      "performance": 1,
-      "accessibility": 1,
-      "best-practices": 1,
-      "seo": 0.91,
-      "pwa": 0.3
-    }
-  },
-  {
-    "url": "http://localhost:40049/index.html",
+    "url": "http://localhost:33923/",
     "isRepresentativeRun": true,
-    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_index_html.report.html",
-    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_index_html.report.json",
+    "htmlPath": "/home/runner/work/sveltekit-static/sveltekit-static/build/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/sveltekit-static/sveltekit-static/build/_lighthouse/_.report.json",
     "summary": {
       "performance": 1,
       "accessibility": 1,
