@@ -1,0 +1,41 @@
+[
+  {
+    "url": "http://localhost:3000/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 0.77,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.94,
+      "pwa": 0.2
+    }
+  },
+  {
+    "url": "http://localhost:3000/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.94,
+      "pwa": 0.2
+    }
+  },
+  {
+    "url": "http://localhost:3000/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.94,
+      "pwa": 0.2
+    }
+  }
+]

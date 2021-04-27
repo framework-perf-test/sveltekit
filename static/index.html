@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lighthouse Test | Svelte Kit</title><meta name="description" content="Lighthouse Test | Svelte Kit" data-svelte="svelte-ahmmef">
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-2b274e32.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-1fa1ec0b.js">
+		<link rel="modulepreload" href="/./_app/pages/$layout.svelte-9352d073.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-418440fb.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-2b274e32.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/$layout.svelte-9352d073.js"),
+						import("/./_app/pages/index.svelte-418440fb.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<header><h1>SvelteKit Demo</h1>
+	<nav><a href="/">Home</a></nav></header>
+<br>
+
+
+<h2>Home</h2>
+<h3>Todos <button>New</button></h3>
+
+<br>
+<table><thead><tr><th>Id</th>
+	<th>Name</th>
+	<th>description</th>
+	<th>Type</th>
+	<th>Confidential</th>
+	<th>Remind</th>
+	<th>Date</th>
+	<th>Actions</th></tr></thead>
+	<tbody><tr><td>1</td>
+		<td>Add more frameworks</td>
+		<td>We need to add more frameworks</td>
+		<td>Issue</td>
+		<td>Yes</td>
+		<td>true</td>
+		<td>2021-04-07</td>
+		<td><button type="button">Edit</button>
+			<button type="button">Delete</button></td>
+	</tr></tbody></table>
+<br>
+<footer>Check the lighthouse results at
+	<a href="https://lighthouse-test.github.io" rel="noopener" target="_blank">https://lighthouse-test.github.io
+	</a></footer>
+
+
+
+	
+</div>
+	</body>
+</html>
