@@ -1,9 +1,11 @@
+<script lang="ts">
+	import Todos from '$lib/Todo/Todos.svelte';
+</script>
+
 <svelte:head>
-	<title>Svelte Kit</title>
+	<title>Lighthouse Test | Svelte Kit</title>
+	<meta name="description" content="Lighthouse Test | Svelte Kit" />
 </svelte:head>
 
-<h1>Hello { title }!!!</h1>
-
-<script lang="ts">
-	const title = "World";
-</script>
+<h2>Home</h2>
+<Todos />

@@ -1,0 +1,20 @@
+{
+	"ci": {
+		"collect": {
+			"url": ["/"],
+			"staticDistDir": "./build",
+			"isSinglePageApplication": true
+		},
+		"assert": {
+			"assertions": {
+				"uses-long-cache-ttl": "off",
+				"uses-http2": "off"
+			}
+		},
+		"upload": {
+			"target": "filesystem",
+			"outputDir": "./build/_lighthouse",
+			"reportFilenamePattern": "%%PATHNAME%%.report.%%EXTENSION%%"
+		}
+	}
+}

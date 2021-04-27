@@ -1,10 +1,10 @@
 <h1 align="center">Welcome to @lighthouse-test 👋</h1>
 <p>
-  <a href="https://github.com/lighthouse-test/sveltekit-static/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/lighthouse-test/sveltekit/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/lighthouse-test/sveltekit-static/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/@lighthouse-test/sveltekit-static" />
+  <a href="https://github.com/lighthouse-test/sveltekit/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/@lighthouse-test/sveltekit" />
   </a>
   <a href="https://twitter.com/aceonics" target="_blank">
     <img alt="Twitter: aceonics" src="https://img.shields.io/twitter/follow/aceonics.svg?style=social" />
@@ -12,12 +12,35 @@
 </p>
 
 <p>
-  <a href="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.report.html">
-    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.performance.svg" />
-    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.accessibility.svg" />
-    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.best-practices.svg" />
-    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.seo.svg" />
-    <img src="https://lighthouse-test.github.io/sveltekit-static/_lighthouse/_.pwa.svg" />
+  SPA Mode
+  <a href="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.report.html">
+    <img src="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.performance.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.accessibility.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.best-practices.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.seo.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/spa/_lighthouse/_.pwa.svg" />
+  </a>
+</p>
+
+<p>
+  SSR Mode
+  <a href="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.report.html">
+    <img src="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.performance.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.accessibility.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.best-practices.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.seo.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/ssr/_lighthouse/_.pwa.svg" />
+  </a>
+</p>
+
+<p>
+  Static Mode
+  <a href="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.report.html">
+    <img src="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.performance.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.accessibility.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.best-practices.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.seo.svg" />
+    <img src="https://lighthouse-test.github.io/sveltekit/static/_lighthouse/_.pwa.svg" />
   </a>
 </p>
 
@@ -45,7 +68,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2021 [Aceonics Reliable IT Services](https://www.aceonics.com).<br />
-This project is [MIT](https://github.com/lighthouse-test/sveltekit-static/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/lighthouse-test/sveltekit/blob/master/LICENSE) licensed.
 
 ---
 

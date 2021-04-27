@@ -6,9 +6,9 @@ on:
       - main
 
 jobs:
-  deploy:
+  build_and_test_spa:
     runs-on: ubuntu-latest
-    env: 
+    env:
       BUILD_PATH: 'build'
     steps:
       - name: Checkout
@@ -17,18 +17,101 @@ jobs:
       - name: Install and Build
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: '14'
       - run: yarn install
-      - run: yarn build
+      - run: MODE=spa yarn build
       - run: npm install -g @lhci/cli@0.7.x @lighthouse-test/badge-generator
-      - run: lhci autorun
+      - run: lhci autorun --config ./.lighthouserc.spa.json
       - run: lighthouse-badge-generator ${{ env.BUILD_PATH }}/_lighthouse
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
-      - name: Deploy Build & Results to Github Pages 
+      - name: Save Build and Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: spa
+          path: ${{ env.BUILD_PATH }}
+
+  build_and_test_ssr:
+    runs-on: ubuntu-latest
+    env:
+      BUILD_PATH: 'build'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install
+      - run: MODE=ssr yarn build
+      - run: npm install -g @lhci/cli@0.7.x @lighthouse-test/badge-generator
+      - run: lhci autorun --config ./.lighthouserc.ssr.json
+      - run: lighthouse-badge-generator ${{ env.BUILD_PATH }}/_lighthouse
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: Save Build and Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: ssr
+          path: ${{ env.BUILD_PATH }}
+
+  build_and_test_static:
+    runs-on: ubuntu-latest
+    env:
+      BUILD_PATH: 'build'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install
+      - run: yarn build
+      - run: npm install -g @lhci/cli@0.7.x @lighthouse-test/badge-generator
+      - run: lhci autorun --config ./.lighthouserc.static.json
+      - run: lighthouse-badge-generator ${{ env.BUILD_PATH }}/_lighthouse
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: Save Build and Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: static
+          path: ${{ env.BUILD_PATH }}
+
+  publish_test_results:
+    needs: [build_and_test_spa, build_and_test_ssr, build_and_test_static]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Download spa
+        uses: actions/download-artifact@v2
+        with:
+          name: spa
+          path: ./gh-pages/spa
+
+      - name: Download ssr
+        uses: actions/download-artifact@v2
+        with:
+          name: ssr
+          path: ./gh-pages/ssr
+
+      - name: Download static
+        uses: actions/download-artifact@v2
+        with:
+          name: static
+          path: ./gh-pages/static
+
+      - name: Deploy Build & Results to Github Pages
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ${{ env.BUILD_PATH }}
+          publish_dir: ./gh-pages
