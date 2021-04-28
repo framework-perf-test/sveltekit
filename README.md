@@ -1,10 +1,13 @@
 <h1 align="center">Welcome to @lighthouse-test 👋</h1>
 <p>
+  <a href="https://github.com/lighthouse-test/sveltekit/actions/workflows/lighthouse.yml" target="_blank">
+    <img alt="Maintenance" src="https://github.com/lighthouse-test/sveltekit/actions/workflows/lighthouse.yml/badge.svg" />
+  </a>
   <a href="https://github.com/lighthouse-test/sveltekit/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/lighthouse-test/sveltekit/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/@lighthouse-test/sveltekit" />
+  <a href="https://github.com/lighthouse-test/badge-generator/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/npm/l/@lighthouse-test/badge-generator" />
   </a>
   <a href="https://twitter.com/aceonics" target="_blank">
     <img alt="Twitter: aceonics" src="https://img.shields.io/twitter/follow/aceonics.svg?style=social" />
