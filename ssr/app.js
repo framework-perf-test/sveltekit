@@ -72,16 +72,16 @@ function init(settings) {
     amp: false,
     dev: false,
     entry: {
-      file: "/./_app/start-2b274e32.js",
+      file: "/./_app/start-a4e0da1c.js",
       css: ["/./_app/assets/start-a8cd1609.css"],
-      js: ["/./_app/start-2b274e32.js", "/./_app/chunks/vendor-1fa1ec0b.js"]
+      js: ["/./_app/start-a4e0da1c.js", "/./_app/chunks/vendor-1fa1ec0b.js"]
     },
     fetched: void 0,
     get_component_path: (id) => "/./_app/" + entry_lookup[id],
-    get_stack: (error2) => String(error2),
-    handle_error: (error2) => {
-      console.error(error2.stack);
-      error2.stack = options.get_stack(error2);
+    get_stack: (error) => String(error),
+    handle_error: (error) => {
+      console.error(error.stack);
+      error.stack = options.get_stack(error);
     },
     hooks: get_hooks(user_hooks),
     hydrate: true,
@@ -101,14 +101,14 @@ const empty = () => ({});
 const manifest = {
   assets: [{file: "favicon.ico", size: 1150, type: "image/vnd.microsoft.icon"}, {file: "global.css", size: 0, type: "text/css"}],
   layout: "src/routes/$layout.svelte",
-  error: ".svelte/build/components/error.svelte",
+  error: "src/routes/$error.svelte",
   routes: [
     {
       type: "page",
       pattern: /^\/$/,
       params: empty,
       a: ["src/routes/$layout.svelte", "src/routes/index.svelte"],
-      b: [".svelte/build/components/error.svelte"]
+      b: ["src/routes/$error.svelte"]
     }
   ]
 };
@@ -121,14 +121,14 @@ const module_lookup = {
   "src/routes/$layout.svelte": () => Promise.resolve().then(function() {
     return $layout$1;
   }),
-  ".svelte/build/components/error.svelte": () => Promise.resolve().then(function() {
-    return error;
+  "src/routes/$error.svelte": () => Promise.resolve().then(function() {
+    return $error$1;
   }),
   "src/routes/index.svelte": () => Promise.resolve().then(function() {
     return index;
   })
 };
-const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-9352d073.js", css: [], js: ["/./_app/pages/$layout.svelte-9352d073.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, ".svelte/build/components/error.svelte": {entry: "/./_app/error.svelte-365b6fe8.js", css: [], js: ["/./_app/error.svelte-365b6fe8.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-418440fb.js", css: [], js: ["/./_app/pages/index.svelte-418440fb.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}};
+const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-9352d073.js", css: [], js: ["/./_app/pages/$layout.svelte-9352d073.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/$error.svelte": {entry: "/./_app/pages/$error.svelte-69819081.js", css: [], js: ["/./_app/pages/$error.svelte-69819081.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-0a367839.js", css: [], js: ["/./_app/pages/index.svelte-0a367839.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}};
 async function load_component(file) {
   return {
     module: await module_lookup[file](),
@@ -157,28 +157,13 @@ var $layout$1 = /* @__PURE__ */ Object.freeze({
   [Symbol.toStringTag]: "Module",
   default: $layout
 });
-function load({error: error2, status}) {
-  return {props: {error: error2, status}};
-}
-const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let {status} = $$props;
-  let {error: error2} = $$props;
-  if ($$props.status === void 0 && $$bindings.status && status !== void 0)
-    $$bindings.status(status);
-  if ($$props.error === void 0 && $$bindings.error && error2 !== void 0)
-    $$bindings.error(error2);
-  return `<h1>${escape(status)}</h1>
-
-<p>${escape(error2.message)}</p>
-
-
-${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
+const $error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<h2>Seems like this page doesn&#39;t exist :(</h2>`;
 });
-var error = /* @__PURE__ */ Object.freeze({
+var $error$1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
-  default: Error,
-  load
+  default: $error
 });
 const TYPES = [
   "Feature",
