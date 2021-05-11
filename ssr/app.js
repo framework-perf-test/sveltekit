@@ -72,9 +72,9 @@ function init(settings) {
     amp: false,
     dev: false,
     entry: {
-      file: "/./_app/start-a4e0da1c.js",
+      file: "/./_app/start-d5728a04.js",
       css: ["/./_app/assets/start-a8cd1609.css"],
-      js: ["/./_app/start-a4e0da1c.js", "/./_app/chunks/vendor-1fa1ec0b.js"]
+      js: ["/./_app/start-d5728a04.js", "/./_app/chunks/vendor-1fa1ec0b.js"]
     },
     fetched: void 0,
     get_component_path: (id) => "/./_app/" + entry_lookup[id],
@@ -128,7 +128,7 @@ const module_lookup = {
     return index;
   })
 };
-const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-9352d073.js", css: [], js: ["/./_app/pages/$layout.svelte-9352d073.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/$error.svelte": {entry: "/./_app/pages/$error.svelte-69819081.js", css: [], js: ["/./_app/pages/$error.svelte-69819081.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-0a367839.js", css: [], js: ["/./_app/pages/index.svelte-0a367839.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}};
+const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-9352d073.js", css: [], js: ["/./_app/pages/$layout.svelte-9352d073.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/$error.svelte": {entry: "/./_app/pages/$error.svelte-69819081.js", css: [], js: ["/./_app/pages/$error.svelte-69819081.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-ecd6e88b.js", css: [], js: ["/./_app/pages/index.svelte-ecd6e88b.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}};
 async function load_component(file) {
   return {
     module: await module_lookup[file](),
@@ -216,7 +216,7 @@ const Todos = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h3>Todos <button>New</button></h3>
 ${``}
 <br>
-<table><thead><tr><th>Id</th>
+<table width="${"100%"}"><thead><tr><th>Id</th>
 			<th>Name</th>
 			<th>description</th>
 			<th>Type</th>
