@@ -42,7 +42,7 @@
 	<TodoForm todo={currentTodo} on:add-or-update={onAddOrUpdate} />
 {/if}
 <br />
-<table>
+<table width="100%">
 	<thead>
 		<tr>
 			<th>Id</th>
