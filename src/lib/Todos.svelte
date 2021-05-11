@@ -67,6 +67,7 @@
 				<td>{todo.date}</td>
 				<td>
 					<button type="button" on:click={() => selectTodoHandler(todo.id)}>Edit</button>
+					&nbsp;
 					<button type="button" on:click={() => deleteTodoHandler(todo.id)}>Delete</button>
 				</td>
 			</tr>
