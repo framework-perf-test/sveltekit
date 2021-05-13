@@ -52,14 +52,14 @@
 <table width="100%">
 	<thead>
 		<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>description</th>
-			<th>Type</th>
-			<th>Confidential</th>
-			<th>Remind</th>
-			<th>Date</th>
-			<th>Actions</th>
+			<th align="left">Id</th>
+			<th align="left">Name</th>
+			<th align="left">description</th>
+			<th align="left">Type</th>
+			<th align="left">Confidential</th>
+			<th align="left">Remind</th>
+			<th align="left">Date</th>
+			<th align="left">Actions</th>
 		</tr>
 	</thead>
 	<tbody>
