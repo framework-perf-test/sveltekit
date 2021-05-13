@@ -72,9 +72,9 @@ function init(settings) {
     amp: false,
     dev: false,
     entry: {
-      file: "/./_app/start-4331c36a.js",
+      file: "/./_app/start-d38455a1.js",
       css: ["/./_app/assets/start-a8cd1609.css"],
-      js: ["/./_app/start-4331c36a.js", "/./_app/chunks/vendor-1fa1ec0b.js"]
+      js: ["/./_app/start-d38455a1.js", "/./_app/chunks/vendor-d457d503.js"]
     },
     fetched: void 0,
     get_component_path: (id) => "/./_app/" + entry_lookup[id],
@@ -128,7 +128,7 @@ const module_lookup = {
     return index;
   })
 };
-const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-9352d073.js", css: [], js: ["/./_app/pages/$layout.svelte-9352d073.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/$error.svelte": {entry: "/./_app/pages/$error.svelte-69819081.js", css: [], js: ["/./_app/pages/$error.svelte-69819081.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-b20137af.js", css: [], js: ["/./_app/pages/index.svelte-b20137af.js", "/./_app/chunks/vendor-1fa1ec0b.js"], styles: null}};
+const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-abc41468.js", css: [], js: ["/./_app/pages/$layout.svelte-abc41468.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}, "src/routes/$error.svelte": {entry: "/./_app/pages/$error.svelte-bad3c33d.js", css: [], js: ["/./_app/pages/$error.svelte-bad3c33d.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-3a756da9.js", css: [], js: ["/./_app/pages/index.svelte-3a756da9.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}};
 async function load_component(file) {
   return {
     module: await module_lookup[file](),
@@ -165,15 +165,38 @@ var $error$1 = /* @__PURE__ */ Object.freeze({
   [Symbol.toStringTag]: "Module",
   default: $error
 });
-const TYPES = [
-  "Feature",
-  "Docs",
-  "Issue",
-  "Backend",
-  "Frontent"
-];
+create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  createEventDispatcher();
+  let {todo} = $$props;
+  if ($$props.todo === void 0 && $$bindings.todo && todo !== void 0)
+    $$bindings.todo(todo);
+  return `<h4>Todo</h4>
+<table><tbody><tr><th align="${"left"}">Name </th>
+			<td>${escape(todo.name)}</td></tr>
+		<tr><th align="${"left"}">Description </th>
+			<td>${escape(todo.description)}</td></tr>
+		<tr><th align="${"left"}">Type </th>
+			<td>${escape(todo.type)}</td></tr>
+		<tr><th align="${"left"}">Confidential </th>
+			<td>${escape(todo.confidential)}</td></tr>
+		<tr><th align="${"left"}">Remind </th>
+			<td>${escape(todo.remind)}</td>
+			<td></td></tr>
+		<tr><th align="${"left"}">Date </th>
+			<td>${escape(todo.date)}</td></tr>
+		<tr><th colspan="${"2"}" align="${"right"}"><button type="${"button"}">Close</button></th></tr></tbody></table>`;
+});
+const TYPES = ["Feature", "Docs", "Issue", "Backend", "Frontent"];
 const TODOS = [
-  {id: 1, name: "Add more frameworks", description: "We need to add more frameworks", type: "Issue", confidential: "Yes", remind: true, date: "2021-04-07"}
+  {
+    id: 1,
+    name: "Add more frameworks",
+    description: "We need to add more frameworks",
+    type: "Issue",
+    confidential: "Yes",
+    remind: true,
+    date: "2021-04-07"
+  }
 ];
 const getTodos = () => {
   return TODOS;
@@ -188,7 +211,7 @@ create_ssr_component(($$result, $$props, $$bindings, slots) => {
 <form novalidate><table><tbody><tr><th align="${"left"}"><label for="${"name"}">Name</label></th>
 				<td><input id="${"name"}" type="${"text"}" name="${"name"}" required${add_attribute("value", todo.name, 1)}></td>
 				<td>${``}</td></tr>
-			<tr><th align="${"left"}"><label for="${"description"}">description</label></th>
+			<tr><th align="${"left"}"><label for="${"description"}">Description</label></th>
 				<td><textarea id="${"description"}" name="${"description"}" required>${todo.description || ""}</textarea></td>
 				<td>${``}</td></tr>
 			<tr><th align="${"left"}"><label for="${"type"}">Type</label></th>
@@ -215,6 +238,7 @@ const Todos = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let todos = getTodos();
   return `<h3>Todos <button>New</button></h3>
 ${``}
+${``}
 <br>
 <table width="${"100%"}"><thead><tr><th>Id</th>
 			<th>Name</th>
@@ -231,7 +255,9 @@ ${``}
 				<td>${escape(todo.confidential)}</td>
 				<td>${escape(todo.remind)}</td>
 				<td>${escape(todo.date)}</td>
-				<td><button type="${"button"}">Edit</button>
+				<td><button type="${"button"}">View</button>
+					\xA0
+					<button type="${"button"}">Edit</button>
 					\xA0
 					<button type="${"button"}">Delete</button></td>
 			</tr>`)}</tbody></table>`;

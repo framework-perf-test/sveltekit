@@ -5,10 +5,10 @@
     "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.95,
+      "performance": 0.98,
       "accessibility": 1,
       "best-practices": 1,
-      "seo": 0.94,
+      "seo": 0.93,
       "pwa": 0.2
     }
   },
@@ -21,7 +21,7 @@
       "performance": 1,
       "accessibility": 1,
       "best-practices": 1,
-      "seo": 0.94,
+      "seo": 0.93,
       "pwa": 0.2
     }
   },
@@ -34,7 +34,7 @@
       "performance": 1,
       "accessibility": 1,
       "best-practices": 1,
-      "seo": 0.94,
+      "seo": 0.93,
       "pwa": 0.2
     }
   }
