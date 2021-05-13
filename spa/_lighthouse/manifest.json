@@ -1,19 +1,6 @@
 [
   {
-    "url": "http://localhost:44873/",
-    "isRepresentativeRun": false,
-    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
-    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
-    "summary": {
-      "performance": 0.68,
-      "accessibility": 1,
-      "best-practices": 1,
-      "seo": 0.85,
-      "pwa": 0.2
-    }
-  },
-  {
-    "url": "http://localhost:44873/",
+    "url": "http://localhost:40763/",
     "isRepresentativeRun": false,
     "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
@@ -26,7 +13,20 @@
     }
   },
   {
-    "url": "http://localhost:44873/",
+    "url": "http://localhost:40763/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
+    "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.85,
+      "pwa": 0.2
+    }
+  },
+  {
+    "url": "http://localhost:40763/",
     "isRepresentativeRun": true,
     "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",

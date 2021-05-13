@@ -72,9 +72,9 @@ function init(settings) {
     amp: false,
     dev: false,
     entry: {
-      file: "/./_app/start-d38455a1.js",
+      file: "/./_app/start-6d6205d3.js",
       css: ["/./_app/assets/start-a8cd1609.css"],
-      js: ["/./_app/start-d38455a1.js", "/./_app/chunks/vendor-d457d503.js"]
+      js: ["/./_app/start-6d6205d3.js", "/./_app/chunks/vendor-d457d503.js"]
     },
     fetched: void 0,
     get_component_path: (id) => "/./_app/" + entry_lookup[id],
@@ -128,7 +128,7 @@ const module_lookup = {
     return index;
   })
 };
-const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-abc41468.js", css: [], js: ["/./_app/pages/$layout.svelte-abc41468.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}, "src/routes/$error.svelte": {entry: "/./_app/pages/$error.svelte-bad3c33d.js", css: [], js: ["/./_app/pages/$error.svelte-bad3c33d.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-3a756da9.js", css: [], js: ["/./_app/pages/index.svelte-3a756da9.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}};
+const metadata_lookup = {"src/routes/$layout.svelte": {entry: "/./_app/pages/$layout.svelte-abc41468.js", css: [], js: ["/./_app/pages/$layout.svelte-abc41468.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}, "src/routes/$error.svelte": {entry: "/./_app/pages/$error.svelte-bad3c33d.js", css: [], js: ["/./_app/pages/$error.svelte-bad3c33d.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}, "src/routes/index.svelte": {entry: "/./_app/pages/index.svelte-761a3935.js", css: [], js: ["/./_app/pages/index.svelte-761a3935.js", "/./_app/chunks/vendor-d457d503.js"], styles: null}};
 async function load_component(file) {
   return {
     module: await module_lookup[file](),
@@ -240,14 +240,14 @@ const Todos = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 ${``}
 ${``}
 <br>
-<table width="${"100%"}"><thead><tr><th>Id</th>
-			<th>Name</th>
-			<th>description</th>
-			<th>Type</th>
-			<th>Confidential</th>
-			<th>Remind</th>
-			<th>Date</th>
-			<th>Actions</th></tr></thead>
+<table width="${"100%"}"><thead><tr><th align="${"left"}">Id</th>
+			<th align="${"left"}">Name</th>
+			<th align="${"left"}">description</th>
+			<th align="${"left"}">Type</th>
+			<th align="${"left"}">Confidential</th>
+			<th align="${"left"}">Remind</th>
+			<th align="${"left"}">Date</th>
+			<th align="${"left"}">Actions</th></tr></thead>
 	<tbody>${each(todos, (todo) => `<tr><td>${escape(todo.id)}</td>
 				<td>${escape(todo.name)}</td>
 				<td>${escape(todo.description)}</td>

@@ -5,7 +5,7 @@
     "htmlPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/sveltekit/sveltekit/build/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.98,
+      "performance": 0.84,
       "accessibility": 1,
       "best-practices": 1,
       "seo": 0.93,
