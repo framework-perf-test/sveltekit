@@ -1,19 +1,23 @@
 <script lang="ts">
+	import TodoView from './TodoView.svelte';
 	import TodoForm from './TodoForm.svelte';
 	import type { Todo } from './todos';
 	import { addTodo, deleteTodo, getTodo, getTodos, updateTodo } from './todos';
 
 	let currentTodo: Partial<any> | null = null;
+	let currentEvent: string | null = null;
 	let todos: any[] = getTodos();
 
 	const addTodoHandler = () => {
+		currentEvent = 'edit';
 		currentTodo = {
 			confidential: 'No',
 			remind: false
 		};
 	};
 
-	function selectTodoHandler(id: number) {
+	function selectTodoHandler(id: number, event: string) {
+		currentEvent = event;
 		currentTodo = getTodo(id);
 	}
 
@@ -38,7 +42,10 @@
 </script>
 
 <h3>Todos <button on:click={addTodoHandler}>New</button></h3>
-{#if currentTodo}
+{#if currentTodo && currentEvent === 'view'}
+	<TodoView todo={currentTodo} on:close={() => (currentTodo = null)} />
+{/if}
+{#if currentTodo && currentEvent === 'edit'}
 	<TodoForm todo={currentTodo} on:add-or-update={onAddOrUpdate} />
 {/if}
 <br />
@@ -66,7 +73,9 @@
 				<td>{todo.remind}</td>
 				<td>{todo.date}</td>
 				<td>
-					<button type="button" on:click={() => selectTodoHandler(todo.id)}>Edit</button>
+					<button type="button" on:click={() => selectTodoHandler(todo.id, 'view')}>View</button>
+					&nbsp;
+					<button type="button" on:click={() => selectTodoHandler(todo.id, 'edit')}>Edit</button>
 					&nbsp;
 					<button type="button" on:click={() => deleteTodoHandler(todo.id)}>Delete</button>
 				</td>

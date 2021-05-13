@@ -57,7 +57,7 @@
 			</tr>
 			<tr>
 				<th align="left">
-					<label for="description">description</label>
+					<label for="description">Description</label>
 				</th>
 				<td>
 					<textarea id="description" name="description" bind:value={todo.description} required />
